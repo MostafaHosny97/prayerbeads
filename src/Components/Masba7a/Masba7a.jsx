@@ -121,8 +121,7 @@ export default function Masba7a() {
     <section className='text-center h-full mx-auto my-20'>
       <button className="custom-color w-10 lg:w-14 h-10 lg:h-14 bg-white rounded-full fixed bottom-14 left-10" style={buttonStyle}  onClick={changeImage}></button>
       <div>
-        {/* <h1 className='original-text-shadow' style={counterStyle}>Prayer Beads</h1> */}
-        <h1 className='original-text-shadow' style={counterStyle}>Electronic Rosary</h1>
+        <h1 className='original-text-shadow' style={counterStyle}>Prayer Beads</h1>
         <div className="msb7a flex justify-center items-center relative mt-20 mb-16">
           <div className="imgs relative mx-auto text-center ">
             <h3 className='text-blue-900 font-extrabold text-7xl absolute right-[4.6rem] lg:right-[5.5rem] top-[3.2rem]  shadow-2xl' style={counterStyle}>{counter}</h3>
