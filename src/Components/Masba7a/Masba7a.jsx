@@ -29,6 +29,10 @@ export default function Masba7a() {
     localStorage.setItem('counter', counter.toString());
   }, [counter]);
 
+  useEffect(() => {
+    // Update localStorage whenever the selected value changes
+    localStorage.setItem('selectedValue', value);
+  }, [value]);
 
   function changeCounter() {
     // Check if vibration is supported
