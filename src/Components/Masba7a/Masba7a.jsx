@@ -13,7 +13,6 @@ export default function Masba7a() {
   const [counter, setCounter] = useState(storedCounter);
   const [currentImage, setCurrentImage] = useState(0);
   const [value, setValue] = useState(storedValue);
-  const audioRef = useRef(null);
   const [showSuccessMessage33, setShowSuccessMessage33] = useState(false);
   const [showSuccessMessage99, setShowSuccessMessage99] = useState(false);
   const [showResetConfirmation, setShowResetConfirmation] = useState(false);
@@ -35,26 +34,12 @@ export default function Masba7a() {
   }, [value]);
 
   function changeCounter() {
-    // Check if vibration is supported
-    if ('vibrate' in navigator) {
-      // Attempt to vibrate for 100 milliseconds
-      try {
-        navigator.vibrate(1000);
-        console.log('Vibration successful!');
-      } catch (error) {
-        console.error('Vibration failed.', error);
-      }
-    } else {
-      console.warn('Vibration API not supported.');
+    // Check if the navigator and vibrate API are available
+    if (window.navigator && window.navigator.vibrate) {
+      // Vibrate for 100 milliseconds
+      window.navigator.vibrate(100);
     }
   
-    // Play the click sound
-    if (audioRef.current) {
-      // Make sure the audio is loaded before playing
-      audioRef.current.load();
-      audioRef.current.play();
-    }
-
     if (value === '33') {
       const increase = counter === 33 ? 1 : counter + 1;
       setCounter(increase);
@@ -119,6 +104,7 @@ export default function Masba7a() {
   const counterStyle = {
     color: counterColors[currentImage],
   };
+  
 
 
   return (
@@ -130,16 +116,16 @@ export default function Masba7a() {
         {/* mt-20 mb-16 */}
           <div className="imgs relative mx-auto text-center ">
             <h3 className='text-blue-900 font-extrabold text-7xl absolute right-[4.6rem] lg:right-[5.5rem] top-[3.2rem]' style={counterStyle}>{counter}</h3>
-            <img src={images[currentImage]} className='w-60' alt="Seb7a" />
+            <img src={images[currentImage]} className='w-60 shadow-xl ' alt="Seb7a" />
             <div className="btns flex justify-center items-center mx-auto text-center">
-              <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem]'></button>
-              <button onClick={resetCounter} className='original-button2 absolute bottom-[6.2rem] right-[3.2rem] '></button>
+              <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
+              <button onClick={resetCounter} className='original-button2 absolute bottom-[6.2rem] right-[3.2rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
             </div>
           </div>
         </div>
       </div>
 
-      <select className='text-3xl mt-16 mb-24 lg:my-24 cursor-pointer lg:text-4xl mx-auto font-bold border dark:border-white dark:text-white bg-blue-400 text-white dark:bg-blue-200  rounded-xl py-1 px-3 text-center' style={counterStyle} value={value} onChange={handleSelectChange}>
+      <select className='text-3xl mt-16 mb-28 lg:my-24 cursor-pointer lg:text-4xl mx-auto font-bold border dark:border-white dark:text-white bg-blue-400 text-white dark:bg-blue-200  rounded-xl py-1 px-3 text-center' style={counterStyle} value={value} onChange={handleSelectChange}>
         <option className='text-center mx-auto' value={'Infinity'}>Infinity</option>
         <option className='text-center mx-auto' value={33}>33</option>
         <option className='text-center mx-auto' value={99}>99</option>
@@ -148,7 +134,7 @@ export default function Masba7a() {
 
       {showSuccessMessage33 && (
         <div role="alert" className="alert alert-success top-0 left-1/4 fixed text-white w-1/2 mx-auto text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6 text-center mx-auto" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6 text-center mx-auto" fill="none" viewBox="0 0 24 24" ><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           <span className='text-center mx-auto'>أكتمل التسبيح 33 مرة</span>
         </div>
       )}
