@@ -122,7 +122,7 @@ export default function Masba7a() {
 
 
   return (
-    <section className='text-center h-full mx-auto my-20'>
+    <section className='text-center h-full mx-auto py-20 lg:py-28'>
       <button className="custom-color w-10 lg:w-14 h-10 lg:h-14 bg-white rounded-full fixed bottom-14 left-10" style={buttonStyle}  onClick={changeImage}></button>
       <div>
         <h1 className='original-text-shadow' style={counterStyle}>Prayer Beads</h1>

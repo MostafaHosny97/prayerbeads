@@ -7,13 +7,13 @@ module.exports = {
     extend: {
       container:{
         center: true,
-        padding: '2rem', // You can adjust the padding if needed
+        padding: '0 2rem', // You can adjust the padding if needed
       }
     },
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["cupcake", "dark", ],
+    themes: [],
   },
     
   
