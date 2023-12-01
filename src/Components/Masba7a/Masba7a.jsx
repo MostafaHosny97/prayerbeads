@@ -122,13 +122,14 @@ export default function Masba7a() {
 
 
   return (
-    <section className='text-center h-full mx-auto py-20 lg:py-28'>
+    <section className='text-center h-screen mx-auto mt-40 lg:mt-32 py-20'>
       <button className="custom-color w-10 lg:w-14 h-10 lg:h-14 bg-white rounded-full fixed bottom-14 left-10" style={buttonStyle}  onClick={changeImage}></button>
       <div>
-        <h1 className='original-text-shadow' style={counterStyle}>Prayer Beads</h1>
-        <div className="msb7a flex justify-center items-center relative mt-20 mb-16">
+        {/* <h1 className='original-text-shadow' style={counterStyle}>Prayer Beads</h1> */}
+        <div className="msb7a flex justify-center items-center relative ">
+        {/* mt-20 mb-16 */}
           <div className="imgs relative mx-auto text-center ">
-            <h3 className='text-blue-900 font-extrabold text-7xl absolute right-[4.6rem] lg:right-[5.5rem] top-[3.2rem]  shadow-2xl' style={counterStyle}>{counter}</h3>
+            <h3 className='text-blue-900 font-extrabold text-7xl absolute right-[4.6rem] lg:right-[5.5rem] top-[3.2rem]' style={counterStyle}>{counter}</h3>
             <img src={images[currentImage]} className='w-60' alt="Seb7a" />
             <div className="btns flex justify-center items-center mx-auto text-center">
               <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem]'></button>
@@ -138,7 +139,7 @@ export default function Masba7a() {
         </div>
       </div>
 
-      <select className='text-3xl cursor-pointer lg:text-4xl mx-auto font-bold border dark:border-white dark:text-white bg-blue-400 text-white dark:bg-blue-200  rounded-xl py-1 px-3 text-center' style={counterStyle} value={value} onChange={handleSelectChange}>
+      <select className='text-3xl my-16 lg:my-24 cursor-pointer lg:text-4xl mx-auto font-bold border dark:border-white dark:text-white bg-blue-400 text-white dark:bg-blue-200  rounded-xl py-1 px-3 text-center' style={counterStyle} value={value} onChange={handleSelectChange}>
         <option className='text-center mx-auto' value={'Infinity'}>Infinity</option>
         <option className='text-center mx-auto' value={33}>33</option>
         <option className='text-center mx-auto' value={99}>99</option>
