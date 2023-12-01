@@ -139,7 +139,7 @@ export default function Masba7a() {
         </div>
       </div>
 
-      <select className='text-3xl mt-16 lg:my-24 cursor-pointer lg:text-4xl mx-auto font-bold border dark:border-white dark:text-white bg-blue-400 text-white dark:bg-blue-200  rounded-xl py-1 px-3 text-center' style={counterStyle} value={value} onChange={handleSelectChange}>
+      <select className='text-3xl mt-16 mb-24 lg:my-24 cursor-pointer lg:text-4xl mx-auto font-bold border dark:border-white dark:text-white bg-blue-400 text-white dark:bg-blue-200  rounded-xl py-1 px-3 text-center' style={counterStyle} value={value} onChange={handleSelectChange}>
         <option className='text-center mx-auto' value={'Infinity'}>Infinity</option>
         <option className='text-center mx-auto' value={33}>33</option>
         <option className='text-center mx-auto' value={99}>99</option>
