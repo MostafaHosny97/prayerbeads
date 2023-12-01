@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/prayerbeads/static/css/main.81606164.css",
-    "main.js": "/prayerbeads/static/js/main.68665ed7.js",
+    "main.css": "/prayerbeads/static/css/main.cd73c779.css",
+    "main.js": "/prayerbeads/static/js/main.e823b83f.js",
     "static/js/787.a0cd3ef1.chunk.js": "/prayerbeads/static/js/787.a0cd3ef1.chunk.js",
     "static/media/background2.jpg": "/prayerbeads/static/media/background2.890280235383d9020877.jpg",
     "static/media/2.png": "/prayerbeads/static/media/2.d4fd41212bf5cc195dea.png",
@@ -11,12 +11,12 @@
     "static/media/3.png": "/prayerbeads/static/media/3.6fa58a620c2c73d01541.png",
     "static/media/4.png": "/prayerbeads/static/media/4.3652dea1ddfaa0297caf.png",
     "index.html": "/prayerbeads/index.html",
-    "main.81606164.css.map": "/prayerbeads/static/css/main.81606164.css.map",
-    "main.68665ed7.js.map": "/prayerbeads/static/js/main.68665ed7.js.map",
+    "main.cd73c779.css.map": "/prayerbeads/static/css/main.cd73c779.css.map",
+    "main.e823b83f.js.map": "/prayerbeads/static/js/main.e823b83f.js.map",
     "787.a0cd3ef1.chunk.js.map": "/prayerbeads/static/js/787.a0cd3ef1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81606164.css",
-    "static/js/main.68665ed7.js"
+    "static/css/main.cd73c779.css",
+    "static/js/main.e823b83f.js"
   ]
 }
