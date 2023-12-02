@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './masba7a.css';
 import myImage2 from './2.png';
 import myImage1 from './1.PNG';
@@ -16,7 +16,6 @@ export default function Masba7a() {
   const [showSuccessMessage33, setShowSuccessMessage33] = useState(false);
   const [showSuccessMessage99, setShowSuccessMessage99] = useState(false);
   const [showResetConfirmation, setShowResetConfirmation] = useState(false);
-
 
 
   const images = [myImage2, myImage1, myImage3, myImage4,myImage5,myImage6];
@@ -38,7 +37,9 @@ export default function Masba7a() {
     if (window.navigator && window.navigator.vibrate) {
       // Vibrate for 100 milliseconds
       window.navigator.vibrate(100);
+      
     }
+
   
     if (value === '33') {
       const increase = counter === 33 ? 1 : counter + 1;
@@ -118,8 +119,10 @@ export default function Masba7a() {
             <h3 className='text-blue-900 font-extrabold text-7xl absolute right-[4.6rem] lg:right-[5.5rem] top-[3.2rem]' style={counterStyle}>{counter}</h3>
             <img src={images[currentImage]} className='w-60 shadow-xl ' alt="Seb7a" />
             <div className="btns flex justify-center items-center mx-auto text-center">
-              <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
-              <button onClick={resetCounter} className='original-button2 absolute bottom-[6.2rem] right-[3.2rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
+              {/* <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button> */}
+              <button onClick={changeCounter} className='bn5 rounded-full absolute transform hover:scale-105 scale-100 transition-transform duration-300 bottom-[2.2rem] '></button>
+
+              <button onClick={resetCounter} className='bn5-2 original-button2 absolute bottom-[6.2rem] right-[3.2rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
             </div>
           </div>
         </div>
@@ -148,7 +151,7 @@ export default function Masba7a() {
       {/* Reset confirmation dialog */}
       {showResetConfirmation && (
         <div className="fixed font-bold rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 border border-gray-300 shadow-lg">
-          <p className="text-xl font-bold mb-4">هل أنت متأكد أنك تريد إعادة تعيين العداد؟</p>
+          <p className="text-xl font-bold mb-4">هل أنت متأكد أنك تريد إعادة تعيين السبحة؟</p>
           <div className="flex justify-center space-x-4">
             <button onClick={confirmReset} className="bg-blue-500 text-white px-4 py-2 rounded-md">نعم</button>
             <button onClick={cancelReset} className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">لا</button>
