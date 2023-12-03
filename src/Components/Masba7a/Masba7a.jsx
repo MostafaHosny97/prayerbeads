@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './masba7a.css';
-import myImage2 from './2.png';
 import myImage1 from './1.PNG';
+import myImage2 from './2.png';
 import myImage3 from './3.png';
 import myImage4 from './4.png';
 import myImage5 from './5.png';
@@ -24,9 +24,9 @@ export default function Masba7a() {
 
 
 
-  const images = [myImage2, myImage1, myImage3, myImage4,myImage5,myImage6];
-  const buttonColors = ['#C9A416', '#D5D8E1', '#232323','#263F88','#42A100','#C44E2F']; // Add colors corresponding to each image
-  const counterColors = ['#21636B', '#263F88', '#C9A416','#232323','#42A100','#C44E2F']; // Add colors corresponding to each image
+  const images = [ myImage1,myImage2, myImage3, myImage4,myImage5,myImage6];
+  const buttonColors = ['#6B1A20', '#D5D8E1', '#232323','#263F88','#000','#49331d']; // Add colors corresponding to each image
+  const counterColors = ['#263F88','#21636B', '#6B1A20','#232323','#000','#49331d']; // Add colors corresponding to each image
   
   useEffect(() => {
     // Update localStorage whenever the counter changes
@@ -133,7 +133,7 @@ export default function Masba7a() {
   return (
     <section className='text-center h-full mx-auto mt-40 lg:mt-32 py-20'>
             <audio ref={audioRef} src={alertSound} />
-      <button className="custom-color w-10 lg:w-14 h-10 lg:h-14 bg-white rounded-full fixed bottom-14 left-10" style={buttonStyle}  onClick={changeImage}></button>
+      <button className="transform hover:scale-110 scale-100 transition-transform duration-300 custom-color w-12 lg:w-14 h-12 lg:h-14 bg-white rounded-full fixed bottom-14 left-10" style={buttonStyle}  onClick={changeImage}></button>
       <div>
         {/* <h1 className='original-text-shadow' style={counterStyle}>Prayer Beads</h1> */}
         <div className="msb7a flex justify-center items-center relative ">
@@ -143,7 +143,7 @@ export default function Masba7a() {
         <img src={images[currentImage]} className='w-60 shadow-xl' alt="Seb7a" />
         <div className="btns flex justify-center items-center mx-auto text-center">
           <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
-          <button onClick={resetCounter} className='original-button2 absolute bottom-[6.2rem] right-[3.2rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
+          <button onClick={resetCounter} className='original-button2 absolute bottom-[6.3rem] right-[3.2rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
         </div>
       </div>
 
