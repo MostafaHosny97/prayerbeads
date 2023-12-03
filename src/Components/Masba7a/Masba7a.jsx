@@ -6,6 +6,8 @@ import myImage3 from './3.png';
 import myImage4 from './4.png';
 import myImage5 from './5.png';
 import myImage6 from './6.png';
+import alertSound from './alert.mp3'; // تغيير المسار حسب مكان ملف الصوت
+
 
 export default function Masba7a() {
   const storedCounter = parseInt(localStorage.getItem('counter')) || 0;
@@ -17,6 +19,10 @@ export default function Masba7a() {
   const [showSuccessMessage99, setShowSuccessMessage99] = useState(false);
   const [showResetConfirmation, setShowResetConfirmation] = useState(false);
 
+  const audioRef = React.createRef();
+  
+
+
 
   const images = [myImage2, myImage1, myImage3, myImage4,myImage5,myImage6];
   const buttonColors = ['#C9A416', '#D5D8E1', '#232323','#263F88','#42A100','#C44E2F']; // Add colors corresponding to each image
@@ -25,7 +31,19 @@ export default function Masba7a() {
   useEffect(() => {
     // Update localStorage whenever the counter changes
     localStorage.setItem('counter', counter.toString());
-  }, [counter]);
+
+    // Check if the counter has reached the desired value
+    if (value === 33 && counter === 32) {
+      playAlertSound();
+    } else if (value === 99 && counter === 98) {
+      playAlertSound();
+    }
+  }, );
+  function playAlertSound() {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  }
 
   useEffect(() => {
     // Update localStorage whenever the selected value changes
@@ -37,7 +55,6 @@ export default function Masba7a() {
     if (window.navigator && window.navigator.vibrate) {
       // Vibrate for 100 milliseconds
       window.navigator.vibrate(100);
-      
     }
 
   
@@ -50,7 +67,7 @@ export default function Masba7a() {
         // Hide the success message after 2 seconds
         setTimeout(() => {
           setShowSuccessMessage33(false);
-        }, 1000);
+        }, 2000);
       }
     } else if (value === '99') {
       const increase = counter === 99 ? 1 : counter + 1;
@@ -61,12 +78,16 @@ export default function Masba7a() {
         // Hide the success message after 2 seconds
         setTimeout(() => {
           setShowSuccessMessage99(false);
-        }, 1000);
+        }, 2000);
       }
     } else {
       const increase = counter + 1;
       setCounter(increase);
     }
+    // Play alert sound when the counter reaches the desired value
+  if ((value === '33' && counter === 32) || (value === '99' && counter === 98)) {
+    playAlertSound();
+  }
   }
   
 
@@ -86,6 +107,7 @@ export default function Masba7a() {
   function confirmReset() {
     // Reset the counter
     setCounter(0);
+    playAlertSound(true);
     setShowResetConfirmation(false);
   }
 
@@ -110,21 +132,21 @@ export default function Masba7a() {
 
   return (
     <section className='text-center h-full mx-auto mt-40 lg:mt-32 py-20'>
+            <audio ref={audioRef} src={alertSound} />
       <button className="custom-color w-10 lg:w-14 h-10 lg:h-14 bg-white rounded-full fixed bottom-14 left-10" style={buttonStyle}  onClick={changeImage}></button>
       <div>
         {/* <h1 className='original-text-shadow' style={counterStyle}>Prayer Beads</h1> */}
         <div className="msb7a flex justify-center items-center relative ">
         {/* mt-20 mb-16 */}
-          <div className="imgs relative mx-auto text-center ">
-            <h3 className='text-blue-900 font-extrabold text-7xl absolute right-[4.6rem] lg:right-[5.5rem] top-[3.2rem]' style={counterStyle}>{counter}</h3>
-            <img src={images[currentImage]} className='w-60 shadow-xl ' alt="Seb7a" />
-            <div className="btns flex justify-center items-center mx-auto text-center">
-              {/* <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button> */}
-              <button onClick={changeCounter} className='bn5 rounded-full absolute transform hover:scale-105 scale-100 transition-transform duration-300 bottom-[2.2rem] '></button>
+        <div className="imgs relative mx-auto text-center flex flex-col items-center">
+        <h3 className='text-blue-900 font-bold text-7xl absolute top-[3.1rem] mb-auto' style={counterStyle}>{counter}</h3>
+        <img src={images[currentImage]} className='w-60 shadow-xl' alt="Seb7a" />
+        <div className="btns flex justify-center items-center mx-auto text-center">
+          <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
+          <button onClick={resetCounter} className='original-button2 absolute bottom-[6.2rem] right-[3.2rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
+        </div>
+      </div>
 
-              <button onClick={resetCounter} className='bn5-2 original-button2 absolute bottom-[6.2rem] right-[3.2rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
-            </div>
-          </div>
         </div>
       </div>
 
