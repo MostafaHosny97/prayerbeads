@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/prayerbeads/static/css/main.fb05b3d8.css",
-    "main.js": "/prayerbeads/static/js/main.70b62bef.js",
+    "main.css": "/prayerbeads/static/css/main.68a66556.css",
+    "main.js": "/prayerbeads/static/js/main.f098b038.js",
     "static/js/787.a0cd3ef1.chunk.js": "/prayerbeads/static/js/787.a0cd3ef1.chunk.js",
     "static/media/background2.jpg": "/prayerbeads/static/media/background2.890280235383d9020877.jpg",
+    "static/media/6.png": "/prayerbeads/static/media/6.b665563ff8780f84cc0f.png",
     "static/media/2.png": "/prayerbeads/static/media/2.d4fd41212bf5cc195dea.png",
-    "static/media/6.png": "/prayerbeads/static/media/6.58998b19dac906c6683c.png",
-    "static/media/5.png": "/prayerbeads/static/media/5.ddaa572f27c4d0c1ae9f.png",
+    "static/media/3.png": "/prayerbeads/static/media/3.a8420a7140ce86946b78.png",
+    "static/media/5.png": "/prayerbeads/static/media/5.2c3a9f9ac9a2ef9cd84f.png",
     "static/media/1.PNG": "/prayerbeads/static/media/1.3cc11a40d25c54467748.PNG",
-    "static/media/3.png": "/prayerbeads/static/media/3.6fa58a620c2c73d01541.png",
     "static/media/4.png": "/prayerbeads/static/media/4.3652dea1ddfaa0297caf.png",
     "static/media/alert.mp3": "/prayerbeads/static/media/alert.5f1fee46481f6a9e2585.mp3",
     "index.html": "/prayerbeads/index.html",
-    "main.fb05b3d8.css.map": "/prayerbeads/static/css/main.fb05b3d8.css.map",
-    "main.70b62bef.js.map": "/prayerbeads/static/js/main.70b62bef.js.map",
+    "main.68a66556.css.map": "/prayerbeads/static/css/main.68a66556.css.map",
+    "main.f098b038.js.map": "/prayerbeads/static/js/main.f098b038.js.map",
     "787.a0cd3ef1.chunk.js.map": "/prayerbeads/static/js/787.a0cd3ef1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb05b3d8.css",
-    "static/js/main.70b62bef.js"
+    "static/css/main.68a66556.css",
+    "static/js/main.f098b038.js"
   ]
 }
