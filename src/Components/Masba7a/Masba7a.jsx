@@ -139,7 +139,7 @@ export default function Masba7a() {
         <div className="msb7a flex justify-center items-center relative ">
         {/* mt-20 mb-16 */}
         <div className="imgs relative mx-auto text-center flex flex-col items-center">
-        <h3 className='text-blue-900 font-bold text-7xl absolute top-[3.1rem] mb-auto' style={counterStyle}>{counter}</h3>
+        <h3 className='text-blue-900 font-bold text-7xl absolute top-[3.2rem] mb-auto' style={counterStyle}>{counter}</h3>
         <img src={images[currentImage]} className='w-60 shadow-xl' alt="Seb7a" />
         <div className="btns flex justify-center items-center mx-auto text-center">
           <button onClick={changeCounter} className='original-button absolute bottom-[0.7rem] transform scale-105 hover:scale-100 transition-transform duration-300'></button>
@@ -150,7 +150,7 @@ export default function Masba7a() {
         </div>
       </div>
 
-      <select className='text-3xl mt-16 mb-28 lg:my-24 cursor-pointer lg:text-4xl mx-auto font-bold border dark:border-white dark:text-white bg-blue-400 text-white dark:bg-blue-200  rounded-xl py-1 px-3 text-center' style={counterStyle} value={value} onChange={handleSelectChange}>
+      <select className='text-3xl flex mt-16 mb-28 lg:my-24 cursor-pointer lg:text-4xl mx-auto font-bold border dark:border-white dark:text-white bg-blue-400 text-white dark:bg-blue-200 rounded-xl py-1 px-3 text-center' style={counterStyle} value={value} onChange={handleSelectChange}>
         <option className='text-center mx-auto' value={'Infinity'}>Infinity</option>
         <option className='text-center mx-auto' value={33}>33</option>
         <option className='text-center mx-auto' value={99}>99</option>
